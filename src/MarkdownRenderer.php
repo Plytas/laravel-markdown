@@ -72,7 +72,7 @@ class MarkdownRenderer
         return $this;
     }
 
-    public function cacheStoreName(string | bool | null $cacheStoreName): self
+    public function cacheStoreName(?string $cacheStoreName): self
     {
         $this->cacheStoreName = $cacheStoreName;
 
