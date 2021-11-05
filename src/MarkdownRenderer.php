@@ -32,7 +32,7 @@ class MarkdownRenderer
         bool $renderAnchors = true,
         array $extensions = [],
         array $blockRenderers = [],
-        array $inlineRenderers = [],
+        array $inlineRenderers = []
     ) {
         $this->commonmarkOptions = $commonmarkOptions;
         $this->highlightCode = $highlightCode;
