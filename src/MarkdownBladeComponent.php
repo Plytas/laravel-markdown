@@ -16,7 +16,7 @@ class MarkdownBladeComponent extends Component
         ?array $options = [],
         ?bool $highlightCode = null,
         ?string $theme = null,
-        ?bool $anchors = null,
+        ?bool $anchors = null
     ) {
         $this->options = $options;
         $this->highlightCode = $highlighCode;
