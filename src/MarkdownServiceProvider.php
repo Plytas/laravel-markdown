@@ -22,14 +22,14 @@ class MarkdownServiceProvider extends PackageServiceProvider
 
             /** @var \Spatie\LaravelMarkdown\MarkdownRenderer $renderer */
             return new $config['renderer_class'](
-                commonmarkOptions: $config['commonmark_options'],
-                highlightCode: $config['code_highlighting']['enabled'],
-                highlightTheme: $config['code_highlighting']['theme'],
-                cacheStoreName: $config['cache_store'],
-                renderAnchors: $config['add_anchors_to_headings'],
-                extensions: $config['extensions'],
-                blockRenderers: $config['block_renderers'],
-                inlineRenderers: $config['inline_renderers'],
+                $config['commonmark_options'],
+                $config['code_highlighting']['enabled'],
+                $config['code_highlighting']['theme'],
+                $config['cache_store'],
+                $config['add_anchors_to_headings'],
+                $config['extensions'],
+                $config['block_renderers'],
+                $config['inline_renderers'],
             );
         });
     }
