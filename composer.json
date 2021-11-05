@@ -37,7 +37,7 @@
         {
             "type": "vcs",
             "url": "https://github.com/Plytas/commonmark-shiki-highlighter"
-        },
+        }
     ],
     "autoload": {
         "psr-4": {
