@@ -15,16 +15,33 @@ use Spatie\LaravelMarkdown\Renderers\AnchorHeadingRenderer;
 
 class MarkdownRenderer
 {
+    protected array $commonmarkOptions;
+    protected bool $highlightCode;
+    protected string $highlightTheme;
+    protected ?string $cacheStoreName;
+    protected bool $renderAnchors;
+    protected array $extensions;
+    protected array $blockRenderers;
+    protected array $inlineRenderers;
+    
     public function __construct(
-        protected array $commonmarkOptions = [],
-        protected bool $highlightCode = true,
-        protected string $highlightTheme = 'github-light',
-        protected string | bool | null $cacheStoreName = null,
-        protected bool $renderAnchors = true,
-        protected array $extensions = [],
-        protected array $blockRenderers = [],
-        protected array $inlineRenderers = [],
+        array $commonmarkOptions = [],
+        bool $highlightCode = true,
+        string $highlightTheme = 'github-light',
+        ?string $cacheStoreName = null,
+        bool $renderAnchors = true,
+        array $extensions = [],
+        array $blockRenderers = [],
+        array $inlineRenderers = [],
     ) {
+        $this->commonmarkOptions = $commonmarkOptions;
+        $this->highlightCode = $highlightCode;
+        $this->highlightTheme = $highlightTheme;
+        $this->cacheStoreName = $cacheStoreName;
+        $this->renderAnchors = $renderAnchors;
+        $this->extensions = $extensions;
+        $this->blockRenderers = $blockRenderers;
+        $this->inlineRenderers = $inlineRenderers;
     }
 
     public function commonmarkOptions(array $options): self
