@@ -178,7 +178,7 @@ class MarkdownRenderer
         $this->configureCommonMarkEnvironment($environment);
 
         return new MarkdownConverter(
-            environment: $environment
+            $environment
         );
     }
 
