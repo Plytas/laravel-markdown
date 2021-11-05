@@ -21,7 +21,7 @@
         "illuminate/contracts": "^8.37",
         "illuminate/support": "^8.49",
         "illuminate/view": "^8.49",
-        "spatie/commonmark-shiki-highlighter": "^2.0",
+        "spatie/commonmark-shiki-highlighter": "dev-main",
         "spatie/laravel-package-tools": "^1.4.3"
     },
     "require-dev": {
@@ -33,6 +33,12 @@
         "spatie/phpunit-snapshot-assertions": "^4.2",
         "vimeo/psalm": "^4.8"
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/Plytas/commonmark-shiki-highlighter"
+        },
+    ],
     "autoload": {
         "psr-4": {
             "Spatie\\LaravelMarkdown\\": "src"
