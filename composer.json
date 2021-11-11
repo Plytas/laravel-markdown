@@ -21,7 +21,7 @@
         "illuminate/contracts": "^8.37",
         "illuminate/support": "^8.49",
         "illuminate/view": "^8.49",
-        "spatie/commonmark-shiki-highlighter": "dev-main",
+        "spatie/commonmark-shiki-highlighter": "dev-php74",
         "spatie/laravel-package-tools": "^1.4.3"
     },
     "require-dev": {
