@@ -124,7 +124,7 @@ class MarkdownRenderer
 
         return cache()
             ->store($this->cacheStoreName)
-            ->rememberForever($cacheKey, function () use ($markdown) {
+            ->remember($cacheKey, 60 * 60 * 24 * 7 function () use ($markdown) {
                 return $this->convertMarkdownToHtml($markdown);
             });
     }
